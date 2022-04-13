@@ -4,11 +4,9 @@ import './Header.css';
 const Header = () => {
 
     return (
-        <div className='d-flex justify-content-around mt-10'>
+        <div className='d-flex justify-content-center mt-3 mb-5'>
 
-            <div>
-                <h3 className='text-success'>Elonora Shop</h3>
-            </div>
+
             <nav className='nav-section '>
                 <Link className='link' to="/">Home</Link>
                 <Link className='link' to="/review">Review</Link>

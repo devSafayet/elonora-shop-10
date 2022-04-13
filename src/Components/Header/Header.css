@@ -9,3 +9,8 @@
 .link:hover {
     color: orange;
 }
+
+.right-side img {
+    height: 400px;
+    width: 400px;
+}
