@@ -1,0 +1,11 @@
+.nav-section .link {
+    text-decoration: none;
+    margin-left: 5px;
+    font-size: 20px;
+    color: #1e90c2;
+    transition: color ease-in-out 300ms;
+}
+
+.link:hover {
+    color: orange;
+}
