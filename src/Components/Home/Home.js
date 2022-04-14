@@ -1,8 +1,7 @@
 import React from 'react';
 import image from '../../images/images.png';
-
-import { Link } from 'react-router-dom';
 import './Home.css';
+import Review from '../Review/Review';
 
 const Home = () => {
     return (
@@ -18,12 +17,9 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* <div className="mt-5">
-                <Review></Review>
-            </div>
-            <div className=' see-btn'>
-                <Link className='bg-primary  px-5 py-2 text-white rounded text-decoration-none ' to="/review">See Review All</Link>
-            </div> */}
+
+            <Review></Review>
+
         </div>
 
 
