@@ -1,31 +1,31 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Bar, BarChart, Tooltip, XAxis, YAxis } from 'recharts';
+import { CartesianGrid, Legend, Line, LineChart, Pie, PieChart, Tooltip, XAxis, YAxis } from 'recharts';
 
 const Dashboard = () => {
-    const [data, setData] = useState([]);
+    const [data, setData] = useState([])
     useEffect(() => {
-        axios.get('data.json')
-            .then(data => {
-                const dataLoad = data.data;
-                const monthlyData = dataLoad.map(data => {
-                    const parts = data.sell.split('-');
-                    const mc = {
-                        month: parts[0],
-                        investment: parseInt(parts[1])
-                    }
-                    return mc;
-                });
-                setData(monthlyData);
-            })
+        fetch('data.json')
+            .then(res => res.json())
+            .then(data => setData(data))
     }, [])
     return (
-        <BarChart width={800} height={400} data={data}>
-            <Bar dataKey="investment" fill="#8884d8"></Bar>
-            <XAxis dataKey="month"></XAxis>
-            <Tooltip></Tooltip>
-            <YAxis></YAxis>
-        </BarChart>
+        <div className='d-md-flex my-3 container justify-content-between'>
+            <div className='mb-5'>
+                <h3 className='text-primary text-center'>Month Wish Invest and revenue</h3>
+                <LineChart width={500} height={300} data={data}
+                    margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="month" />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    <Line type="monotone" dataKey="investment" stroke="#8884d8" />
+                    <Line type="monotone" dataKey="revenue" stroke="#82ca9d" />
+                </LineChart>
+
+            </div>
+
+        </div>
     );
 };
 
