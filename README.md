@@ -1,7 +1,7 @@
 ### `Elonora`
 
 Runs the app in the development mode.\
-Open [https://elonora.netlify.app](https://elonora.netlify.app/) to view it in your browser.
+Open [https://eleonora-shop.netlify.app/](https://eleonora-shop.netlify.app/) to view it in your browser.
 
 ## Technology Used: 
     *React Js 
