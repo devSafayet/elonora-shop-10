@@ -1,7 +1,7 @@
 import React from 'react';
 import image from '../../images/images.png';
 import './Home.css';
-import Review from '../Review/Review';
+import CustomerReview from '../CustomerReview/CustomerReview';
 
 const Home = () => {
     return (
@@ -18,7 +18,7 @@ const Home = () => {
             </section>
 
 
-            <Review></Review>
+            <CustomerReview></CustomerReview>
 
         </div>
 
